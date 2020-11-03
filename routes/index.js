@@ -27,7 +27,10 @@ router.post('/', (req, res) => {
   }
   if (gender == "chia") {
     mainResult = parseFloat(firstNumber) / parseFloat(secondNumber);
+    if(mainResult == "Infinity"){ 
+      mainResult = "Không hợp lệ"
 
+      }
   }
   res.render('index', { title: 'Bé tập tính - Express- 1712722', firstNumber, secondNumber, mainResult, number, result, gender });
 });
