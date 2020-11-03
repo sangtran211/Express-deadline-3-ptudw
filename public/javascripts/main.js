@@ -1,5 +1,5 @@
 function checkFloat1() {
-    var x = document.getElementById("firstNumber");
+    var x = document.getElementById("1stnum");
     if (isNaN(x.value)) {
         document.getElementById("contentError").innerHTML = "Vừa nhập sai định dạng ở ô số 1 !!";
     } else
@@ -9,7 +9,7 @@ function checkFloat1() {
 
 }
 function checkFloat2() {
-    var x = document.getElementById("secondNumber");
+    var x = document.getElementById("2ndnum");
     if (isNaN(x.value)) {
         document.getElementById("contentError").innerHTML = "Vừa nhập sai định dạng ở ô số 2 !!";
     } else

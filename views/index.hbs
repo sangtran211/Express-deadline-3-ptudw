@@ -3,13 +3,13 @@
 
 <form method="post">
   <input name="number" value="{{number}}">
-  <input type="submit" value="Square">
   <input value="{{result}}">
+   <input type="submit" value="Square">
 </form>
 
 <form method="post">
-  <input name="firstNumber" onblur="checkFloat1()" value="{{firstNumber}}" />
-  <input name="secondNumber" onblur="checkFloat2()" value="{{secondNumber}}" />
+  <input id="1stnum" name="firstNumber" onblur="checkFloat1()" value="{{firstNumber}}" />
+  <input id="2ndnum" name="secondNumber" onblur="checkFloat2()" value="{{secondNumber}}" />
   <br>
   <input value="{{mainResult}}">
   <br>
@@ -22,9 +22,11 @@
   <label for="nhan">Nhân</label>
   <input type="radio" id="divide" name="gender" value="400">
   <label for="chia">Chia</label><br>
+  
   <br>
+ 
 
-  <input type="submit" value="Tinh"" />
+  <input type="submit" value="Tinh" />
 
 </form>
     
