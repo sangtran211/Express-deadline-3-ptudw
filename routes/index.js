@@ -14,18 +14,18 @@ router.post('/', (req, res) => {
   const secondNumber = req.body.secondNumber;
   var gender = req.body.gender;
   var mainResult = req.body.mainResult;
-  if (gender == "100") {
+  if (gender == "cong") {
     mainResult = Math.pow(parseFloat(firstNumber), 2);;
   }
-  if (gender == "200") {
+  if (gender == "tru") {
     mainResult = parseFloat(firstNumber) - parseFloat(secondNumber);
 
   }
-  if (gender == "300") {
+  if (gender == "nhan") {
     mainResult = parseFloat(firstNumber) * parseFloat(secondNumber);
 
   }
-  if (gender == "400") {
+  if (gender == "chia") {
     mainResult = parseFloat(firstNumber) / parseFloat(secondNumber);
 
   }
