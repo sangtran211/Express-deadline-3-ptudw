@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
     mainResult = parseFloat(firstNumber) / parseFloat(secondNumber);
 
   }
-  res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult, number, result, gender });
+  res.render('index', { title: 'Bé tập tính - Express- 1712722', firstNumber, secondNumber, mainResult, number, result, gender });
 });
 
 module.exports = router;
