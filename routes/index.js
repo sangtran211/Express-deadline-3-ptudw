@@ -6,11 +6,11 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Bé tập tính - Express- 1712722' });
 });
 
-// router.post('/', (req, res) => {
-//   const number = req.body.number;
-//   const result = Math.pow(parseFloat(number), 2);
-//   res.render('index', { title: 'Bé tập tính - Express- 1712722', number, result });
-// });
+router.post('/', (req, res) => {
+  const number = req.body.number;
+  const result = Math.pow(parseFloat(number), 2);
+  res.render('index', { title: 'Bé tập tính - Express- 1712722', number, result });
+});
 router.post('/', (req, res) => {
   const firstNumber = req.body.firstNumber;
   const secondNumber = req.body.secondNumber;
