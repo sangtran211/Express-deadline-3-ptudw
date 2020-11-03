@@ -12,26 +12,26 @@ router.post('/', (req, res) => {
   const firstNumber = req.body.firstNumber;
   const secondNumber = req.body.secondNumber;
   const gender = req.body.gender;
-  const mainResult =  req.body.mainResult;
+  const mainResult = req.body.mainResult;
   if (gender == 100) {
     mainResult = firstNumber + secondNumber;
-  } else
-    if (gender == 200) {
-       mainResult = firstNumber - secondNumber;
+  }
+  if (gender == 200) {
+    mainResult = firstNumber - secondNumber;
 
-    } else
-      if (gender == 300) {
-         mainResult = firstNumber * secondNumber;
+  }
+  if (gender == 300) {
+    mainResult = firstNumber * secondNumber;
 
-      } else
-        if (gender == 400) {
-           mainResult = firstNumber / secondNumber;
+  }
+  if (gender == 400) {
+    mainResult = firstNumber / secondNumber;
 
-        }
-  res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult , number, result});
+  }
+  res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult, number, result });
 });
 router.post('/', (req, res) => {
-  
+
 });
 module.exports = router;
 
