@@ -12,24 +12,24 @@ router.post('/', (req, res) => {
   const result = parseFloat(number) + parseFloat(number);
   const firstNumber = req.body.firstNumber;
   const secondNumber = req.body.secondNumber;
-  const gender = req.body.gender;
-  const mainResult = req.body.mainResult;
-  if (parseFloat(gender) == "100") {
+  var gender = req.body.gender;
+  var mainResult = req.body.mainResult;
+  if (gender == "100") {
     mainResult = Math.pow(parseFloat(firstNumber), 2);;
   }
-  if (parseFloat(gender) == "200") {
+  if (gender == "200") {
     mainResult = parseFloat(firstNumber) - parseFloat(secondNumber);
 
   }
-  if (parseFloat(gender) == "300") {
+  if (gender == "300") {
     mainResult = parseFloat(firstNumber) * parseFloat(secondNumber);
 
   }
-  if (parseFloat(gender) == "400") {
+  if (gender == "400") {
     mainResult = parseFloat(firstNumber) / parseFloat(secondNumber);
 
   }
-  res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult, number, result });
+  res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult, number, result, gender });
 });
 
 module.exports = router;
