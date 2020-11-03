@@ -18,6 +18,30 @@ function checkFloat2() {
         }
 }
 
+function check() {
+    var checkinradio = 0 ;
+    if (document.getElementById('add').checked) {
+        checkinradio = 1;
+
+    } else
+        if (document.getElementById('subtract').checked) {
+            checkinradio = 1;
+
+        } else
+            if (document.getElementById('multiply').checked) {
+                checkinradio = 1;
+
+            } else
+                if (document.getElementById('divide').checked) {
+                    checkinradio = 1;
+                }
+    if (checkinradio == 1) {
+    document.calc.submit();
+    }else{
+        document.getElementById("contentError").innerHTML = "Chưa chọn phép tính !!";
+        return;
+        }
+}
 
 // function getcube() {
 //     var number = document.getElementById("number").value;
