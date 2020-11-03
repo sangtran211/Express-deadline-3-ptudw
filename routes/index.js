@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
   var gender = req.body.gender;
   var mainResult = req.body.mainResult;
   if (gender == "cong") {
-    mainResult = Math.pow(parseFloat(firstNumber), 2);;
+    mainResult = parseFloat(firstNumber) + parseFloat(secondNumber);
   }
   if (gender == "tru") {
     mainResult = parseFloat(firstNumber) - parseFloat(secondNumber);

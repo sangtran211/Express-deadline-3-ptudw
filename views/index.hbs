@@ -1,26 +1,136 @@
+
 <h1>{{title}}</h1>
 <p>Hello {{title}}</p>
 
 <form method="post">
-  <input name="number" value="{{number}}">
-  <input value="{{result}}">
-  <br>
-  <input name="firstNumber" value="{{firstNumber}}">
-  <br>
-  <input name="secondNumber" value="{{secondNumber}}">
-    <br>
-  <input type="radio" name="gender" value="cong">  
-  <input type="radio" name="gender" value="tru">
-  <input type="radio"  name="gender" value="nhan">  
-  <input type="radio" name="gender" value="chia">
-  <br>
-  <input value="{{mainResult}}">
-  <input type="submit" value="Square">
-</form>
-    
+    <div class="container origin-div">
+
+      <div class="row title-of-page">
+        <h2 class="title col-lg-8  col-md-12 col-sm-12">Bé tập tính </h2>
+      </div>
+      <div class="row input-row container-fluid">
+        <div class="input-container col-lg-10  col-md-12 col-sm-12 row">
+          <div class="col-lg-7  col-md-12 col-sm-12 input-col">
+            <div class="input-row first-number">
+              <div class="input-container">
+                <div class="input-row row">
+                  <div class="input-title col-lg-5  col-md-12 col-sm-12">Số thứ nhất :</div>
+                  <div class="input-value col-lg-7  col-md-12 col-sm-12">
+                    <div class="input-row first-number">
+                      <input id="firstNumber" name="firstNumber" value="" onblur="checkFloat1()">
+                      <!-- {{firstNumber}} -->
+                      <!-- <input id="firstNumber" name="number" onblur="checkFloat1()" /> -->
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="input-row row">
+                  <div class="input-title col-lg-5  col-md-12 col-sm-12">Số thứ hai :</div>
+                  <div class="input-value col-lg-7  col-md-12 col-sm-12">
+                    <div class="input-row first-number">
+                      <input id="secondNumber" name="secondNumber" value="" onblur=" checkFloat2()">
+                      <!-- {{secondNumber}} -->
+                      <!-- <form>
+                      <input id="secondNumber" name="number" onblur="checkFloat2()" />
+                    </form> -->
+
+                    </div>
+                  </div>
+                </div>
+                <div class="input-row row">
+                  <div class="input-title col-lg-5  col-md-12 col-sm-12"> Kết quả :</div>
+                  <div class="input-value col-lg-7  col-md-12 col-sm-12">
+                    <div class="input-row first-number">
+                      <input value="" id="result" name="result">
+                      <!-- {{mainResult}} -->
+                      <!-- <form>
+                      
+                      <input type="text" id="result" name="result" />
+                    </form> -->
+
+                    </div>
+                  </div>
+                </div>
 
 
 
+                <div class="input-row second-number">
+
+                </div>
+                <div class="input-row result">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4  col-md-12 col-sm-12 buttom-col row">
+            <div class="buttom-container conatiner-fluid">
+              <div class="form-chuc-nang">
+                <input type="radio" name="gender" value="cong">
+
+                <!-- <input type="radio" id="add" name="gender" value="cong"> -->
+                <label for="cong">Cộng</label>
+                <input type="radio" name="gender" value="tru">
+
+                <!-- <input type="radio" id="subtract" name="gender" value="tru"> -->
+                <label for="tru">Trừ</label><br>
+                <input type="radio" name="gender" value="nhan">
+
+                <!-- <input type="radio" id="multiply" name="gender" value="nhan"> -->
+                <label for="nhan">Nhân</label>
+                <input type="radio" name="gender" value="chia">
+
+                <!-- <input type="radio" id="divide" name="gender" value="chia"> -->
+                <label for="chia">Chia</label><br>
+
+              </div>
+              <input type="submit" value="Tính">
+
+              <!-- <input type="button" value="Tính" onclick="Tinh()" /> -->
+            </div>
+
+
+          </div>
+          <div class="error-note col-11 row">
+            <div class="title-error col-lg-3  col-md-12 col-sm-12">Thông báo : </div>
+            <div id="contentError" class=" content-error col-lg-9  col-md-12 col-sm-12"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+
+
+{{!-- <div class="container origin-div">
+
+  <div class="row title-of-page">
+    <h2 class="title col-lg-8  col-md-12 col-sm-12">Bé tập tính </h2>
+  </div>
+  <div class="row input-row container-fluid">
+    <div class="input-container col-lg-10  col-md-12 col-sm-12 row">
+      
+      <form method="post">
+
+        <input name="firstNumber" value="{{firstNumber}}">
+        <br>
+        <input name="secondNumber" value="{{secondNumber}}">
+        <br>
+        <input type="radio" name="gender" value="cong">
+        <input type="radio" name="gender" value="tru">
+        <input type="radio" name="gender" value="nhan">
+        <input type="radio" name="gender" value="chia">
+        <br>
+        <input value="{{mainResult}}">
+        <input type="submit" value="Square">
+      </form>
+    </div>
+
+  </div>
+
+</div> --}}
 
 
 
