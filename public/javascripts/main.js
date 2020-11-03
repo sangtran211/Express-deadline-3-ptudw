@@ -18,7 +18,7 @@ function checkFloat2() {
         }
 }
 
-function check() {
+function checkcalc() {
     var checkinradio = 0 ;
     if (document.getElementById('add').checked) {
         checkinradio = 1;
