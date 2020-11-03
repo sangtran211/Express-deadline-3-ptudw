@@ -8,13 +8,14 @@ router.get('/', function (req, res, next) {
 
 router.post('/', (req, res) => {
   const number = req.body.number;
-  const result = Math.pow(parseFloat(number), 2);
+  // const result = Math.pow(parseFloat(number), 2);
+  const result = number + number;
   const firstNumber = req.body.firstNumber;
   const secondNumber = req.body.secondNumber;
   const gender = req.body.gender;
   const mainResult = req.body.mainResult;
   if (gender == 100) {
-    mainResult =  Math.pow(parseFloat(firstNumber), 2);;
+    mainResult = Math.pow(parseFloat(firstNumber), 2);;
   }
   if (gender == 200) {
     mainResult = firstNumber - secondNumber;
@@ -30,8 +31,6 @@ router.post('/', (req, res) => {
   }
   res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult, number, result });
 });
-router.post('/', (req, res) => {
 
-});
 module.exports = router;
 
