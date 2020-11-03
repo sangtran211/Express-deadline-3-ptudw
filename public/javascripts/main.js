@@ -39,7 +39,7 @@ function check() {
     document.calc.submit();
     }else{
         document.getElementById("contentError").innerHTML = "Chưa chọn phép tính !!";
-        return;
+        break
         }
 }
 
