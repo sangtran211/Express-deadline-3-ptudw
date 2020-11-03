@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
   const gender = req.body.gender;
   const mainResult = req.body.mainResult;
   if (gender == 100) {
-    mainResult = firstNumber + secondNumber;
+    mainResult =  Math.pow(parseFloat(firstNumber), 2);;
   }
   if (gender == 200) {
     mainResult = firstNumber - secondNumber;
