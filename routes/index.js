@@ -15,22 +15,23 @@ router.post('/', (req, res) => {
   const firstNumber = req.body.firstNumber;
   const secondNumber = req.body.secondNumber;
   const gender = req.body.gender;
+  const mainResult =  req.body.mainResult;
   if (gender == 100) {
-    const mainResult = firstNumber + secondNumber;
+    mainResult = firstNumber + secondNumber;
   } else
     if (gender == 200) {
-      const mainResult = firstNumber - secondNumber;
+       mainResult = firstNumber - secondNumber;
 
     } else
       if (gender == 300) {
-        const mainResult = firstNumber * secondNumber;
+         mainResult = firstNumber * secondNumber;
 
       } else
         if (gender == 400) {
-          const mainResult = firstNumber / secondNumber;
+           mainResult = firstNumber / secondNumber;
 
         }
-  res.render('index', { title: 'Bé tập tính - Express- 1712722', firstNumber, secondNumber, mainResult });
+  res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult });
 });
 module.exports = router;
 
