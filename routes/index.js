@@ -12,27 +12,24 @@ router.post('/', (req, res) => {
   const result = parseFloat(number) + parseFloat(number);
   const firstNumber = req.body.firstNumber;
   const secondNumber = req.body.secondNumber;
-  var gender = req.body.gender;
-  var mainResult = req.body.mainResult;
-  if (gender == "cong") {
-    mainResult = parseFloat(firstNumber) + parseFloat(secondNumber);
+  const gender = req.body.gender;
+  const mainResult = req.body.mainResult;
+  if (parseFloat(gender) == 100) {
+    mainResult = Math.pow(parseFloat(firstNumber), 2);;
   }
-  if (gender == "tru") {
+  if (parseFloat(gender) == 200) {
     mainResult = parseFloat(firstNumber) - parseFloat(secondNumber);
 
   }
-  if (gender == "nhan") {
+  if (parseFloat(gender) == 300) {
     mainResult = parseFloat(firstNumber) * parseFloat(secondNumber);
 
   }
-  if (gender == "chia") {
+  if (parseFloat(gender) == 400) {
     mainResult = parseFloat(firstNumber) / parseFloat(secondNumber);
-    if(mainResult == "Infinity"){ 
-      mainResult = "Không hợp lệ"
 
-      }
   }
-  res.render('index', { title: 'Bé tập tính - Express- 1712722', firstNumber, secondNumber, mainResult, number, result, gender });
+  res.render('index', { title: 'Tinh xong', firstNumber, secondNumber, mainResult, number, result });
 });
 
 module.exports = router;
